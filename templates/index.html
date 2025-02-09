@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelalGPT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      .gradient-text {
+        background: linear-gradient(to right, blueviolet, violet);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .gradient-bg {
+        background: linear-gradient(to right, blueviolet, violet);
+      }
+      .newstyle {
+        background-color: #ede7ff;
+        border-left: 5px solid #4b0082;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-blueviolet text-white flex flex-col justify-between h-screen">
+    <!-- Header -->
+    <div class="flex items-center p-4 bg-[#dadada] bg-opacity-50 shadow-md bar">
+      <img alt="HelalGPT logo" class="w-10 h-10 rounded-full" height="100" src="./static/imgs/Logo.jpg" width="100" />
+      <span class="ml-2 text-xl font-semibold gradient-text">HelalGPT</span>
+    </div>
+
+    <!-- Chat Container -->
+    <div id="chat-container" class="flex-grow flex flex-col justify-start items-center p-4 space-y-4 overflow-y-auto">
+      <!-- No default messages here -->
+    </div>
+
+    <!-- Input Area -->
+    <div class="p-4 bg-[#dadada] bg-opacity-50">
+      <div class="flex items-center space-x-2">
+        <input id="question" class="flex-grow bg-gray-200 text-black px-4 py-2 rounded-full shadow-md" placeholder="اطلب العلم والهداية مع HelalGPT" type="text" />
+        <button id="ask-button" class="gradient-bg text-white px-4 py-2 rounded-full flex items-center shadow-md hover:opacity-90 transition"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+
+    <script src="./static/js/app.js"></script>
+  </body>
+</html>
